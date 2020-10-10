@@ -8,3 +8,6 @@ result1=$(($a+$b*$c))
 result2=$(($a*$b+$c))
 #Comput Thered Operation
 result3=$(($a+$b/$c))
+#Comput Fift Operation
+result4=$(($a%$b+$c))
+
