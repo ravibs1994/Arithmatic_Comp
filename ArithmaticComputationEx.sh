@@ -25,3 +25,21 @@ for((k=1;k<=$dictLength;k++))
 	do
 		array+=(${arr[$k]})
 	done
+arrayLength=${#array[@]}
+temp=0
+for((l=0;l<$arrayLength;l++))
+	do
+		for((m=$l+1;m<$arrayLength;m++))
+			do
+				if [ ${array[$l]} -lt ${array[$m]} ]
+					then
+						temp=${array[$l]}
+						array[$l]=${array[$m]}
+						array[$m]=$temp
+				fi
+			done
+	done
+echo "Array in Decending order "${array[@]}
+
+
+
