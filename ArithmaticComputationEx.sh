@@ -19,3 +19,9 @@ for i in $result1 $result2 $result3 $result4
 		arr[$j]=$i
 		((j++))
 	done
+#stored element into array
+dictLength=${#arr[@]}
+for((k=1;k<=$dictLength;k++))
+	do
+		array+=(${arr[$k]})
+	done
