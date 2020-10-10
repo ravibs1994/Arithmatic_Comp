@@ -6,4 +6,5 @@ read -p "Enter 3rd input " c
 result1=$(($a+$b*$c))
 #Comput Second Operation
 result2=$(($a*$b+$c))
-
+#Comput Thered Operation
+result3=$(($a+$b/$c))
