@@ -25,6 +25,7 @@ for((k=1;k<=$dictLength;k++))
 	do
 		array+=(${arr[$k]})
 	done
+#sort Array in decending order
 arrayLength=${#array[@]}
 temp=0
 for((l=0;l<$arrayLength;l++))
@@ -40,6 +41,19 @@ for((l=0;l<$arrayLength;l++))
 			done
 	done
 echo "Array in Decending order "${array[@]}
-
-
+#sort Array using Ascending order
+temp1=0
+for((l=0;l<$arrayLength;l++))
+   do
+      for((m=$l+1;m<$arrayLength;m++))
+         do
+            if [ ${array[$l]} -gt ${array[$m]} ]
+               then
+                  temp=${array[$l]}
+                  array[$l]=${array[$m]}
+                  array[$m]=$temp
+            fi
+         done
+   done
+echo "Array in Ascending order "${array[@]}
 
